@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h2>Calculator v1.0</h2>
+      
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/calculate" method="POST">
+        <div class="form-group">
+          <label for="Number One">Enter First Number</label>
+          <input type="text" name="num1" />
+        </div>
+
+        <div class="form-group">
+          <label for="Number Two">Enter Second Number</label>
+          <input type="text" name="num2" />
+        </div>
+        <div class="form-group">
+          <label for="Number Three">Enter Third Number</label>
+          <input type="text" name="num3" />
+        </div>
+
+        <div class="form-group">
+          <label for="Operation">Operation</label>
+          <select name="operation">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+          </select>
+        </div>
+
+        <input type="submit" value="Click to Calculate" id="calc_btn" class="btn" />
+        <br />
+        <div class="alert">
+         <h2>{{ result }}</h2> 
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
