@@ -14,9 +14,11 @@
     background: rgb(47, 0, 255);
   }
   form {
-    margin: 3rem;
-    padding: 1rem;
+      margin: 2em auto;
+    max-width: 740px;
+    padding: 2rem 4rem;
     background: rgb(47, 0, 255);
+    overflow: auto;
   }
   .form-group {
     padding: 0.5rem 0;
