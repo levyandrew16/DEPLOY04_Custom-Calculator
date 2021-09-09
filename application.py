@@ -32,3 +32,7 @@ def calculate():
         return render_template('cal.html', result=result)
     else:
         return render_template('cal.html')
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template("cal.html")
